@@ -1,0 +1,14 @@
+ECS Task Definition Networking:
+================================
+
+    3 types of Networking Modes:
+
+        - bridge
+        - host
+        - awsvpc
+        - none
+
+    
+    bridge
+
+    
