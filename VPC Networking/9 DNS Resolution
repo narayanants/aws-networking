@@ -1,0 +1,5 @@
+DNS Resolution:
+===============
+
+enableDnsSupport => Default = true
+enableDnsHostname => Default = false
