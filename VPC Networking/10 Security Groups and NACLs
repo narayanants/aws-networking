@@ -1,0 +1,44 @@
+Security Groups and NACLs:
+==========================
+
+
+Security Groups:
+-----------------
+
+    - Instance level
+    - Stateful (both inbound and outbound are allowed)
+    - default (All outbound are allowed)
+    - Support only ALLOW rules
+
+Network Access Control Lists:
+=============================
+
+    - Subnet Level
+    - Stateless
+    - Both inbound and outbound are evaluated
+    - Support both ALLOW and DENY rules
+    
+
+    - Firewall that control traffic from and to subnet 
+    - Default NACL - everything inbound and outbound
+    - One NACL per subnet
+    - new subnets => default NACL
+    
+
+    Rules:
+    ------
+
+        - 1 - 32766
+        - Lower number higher precedence
+        - Last rule is asterisk (*), denies request if doesn't find a match
+        - AWS recommends adding rules by increment of 100
+        - New NACL will deny everything
+        - Block IP Addresses using NACL at subnet level
+
+
+
+        
+        
+
+
+
