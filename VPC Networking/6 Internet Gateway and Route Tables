@@ -1,0 +1,19 @@
+Internet Gateway and Route Tables (IGW)
+=================================
+
+    - Public Subnet - Enable Auto Assign Public IPs
+    - IGW Connect VPC to Internet
+    - Scales Horizontally and is HA and redundant
+    - Must be created separately from VPC
+    - One VPC = 1 IGW and vice versa
+    - IGW is also NAT for instances in the public IPv4
+    - On their own doesn't allow internet access
+    - Route tables are to be edited
+
+
+    - Public Route Table
+    - Private Route Table
+
+    - Public Route Table - 0.0.0.0/0 => IGW
+    
+
