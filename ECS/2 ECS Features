@@ -1,0 +1,84 @@
+ECS Features:
+=============
+
+    Features of Amazon ECS:
+    -----------------------
+
+    - Regional Service
+    - Create a cluster within a new or Existing VPC
+    - Define task definitions and services that specify which Docker container images to run across your clusters
+    - Container images are stored in and pulled from container registries
+
+    Containers and Images:
+    ----------------------
+
+    - To deploy applications on Amazon ECS, your application components must be architected to run in containers.
+    - A Docker container contains everything that your software application needs to run.
+    - Containers are created from a read only template called Images
+    - Images are typically built from DockerFile
+    - These Images are Stored in a Registry from which they can be downloaded and run on your cluster.
+    
+
+        DockerFile => Docker Image => Docker Registry (Amazon ECR, DockerHub)
+
+    
+    Task Definition:
+    ================
+
+        - To prepare your application to run on Amazon ECS, you create a task definition
+        - The task definition is a text file, in JSON format, that describes one or more containers, up to a maximum of ten, that form your application.
+        - Blueprint for your application
+    
+    Task Definition using Fargate launch type:
+    ------------------------------------------
+
+    {
+        "family": "webserver",
+        "containerDefinitions": [
+            {
+                "name": "web",
+                "image": "nginx",
+                "memory": "100",
+                "cpu": "99"
+            },
+        ],
+        "requiresCompatibilities": [
+            "FARGATE"
+        ],
+        "networkMode": "awsvpc",
+        "memory": "512",
+        "cpu": "256",
+    }
+
+    Task and Scheduling:
+    ====================
+
+        - Task is an instantiation of the task definition within a cluster
+        - Once you create a TD for your app in ECS, you can specify the number of tasks that will run on the cluster
+
+        - Each task with Fargate launch type has own isolation boundary  and doesn't share the underlying
+
+            - Kernel
+            - CPU Resources
+            - memory Resources
+            - Elastic Network Interface
+
+    Cluster:
+    ========
+
+        - Regional Service
+        - Logical grouping of Resources
+        - Fargate launch type - ECS manages cluster Resources (Pricier)
+        - EC2 launch type - you manage the container instances (Cheaper)
+        - Container instance = EC2 instance + ECS Container agent
+
+
+    Container Agent:
+    ----------------
+
+        - Runs inside each resource within an ECS Cluster
+        - Send info about resource's current running tasks and resource utilization to ECS.
+        - Start/stop tasks when it receives a request from ECS.
+
+    
+
