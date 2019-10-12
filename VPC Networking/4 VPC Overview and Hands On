@@ -1,0 +1,16 @@
+VPC Overview and Hands On:
+==========================
+
+ - VPC - Virtual Private Cloud
+ - Multiple VPC per Region (Max 5)
+ - Max CIDR per VPC is 5. For each CIDR
+    - Min Size => /28 = 16 IP
+    - Max Size => /16 = 65536 IP
+- Only Private IP ranges are allowed
+
+    10.0.0.0 - 10.255.255.255 (10.0.0.0/8) => Big Networks => Private Networks
+    172.16.0.0 - 172.31.255.255 (172.16.0.0/12) => Default AWS One
+    192.168.0.0 - 192.168.255.255 (192.168.0.0/16) => Home Networks
+
+- VPC should not overlap with other Networks
+
