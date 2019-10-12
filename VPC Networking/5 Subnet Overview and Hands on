@@ -1,0 +1,28 @@
+Subnet Overview and Hands on:
+=============================
+
+    - Subnet = AZ
+    - Public and Private Subnet
+    - 10.0.0.0/24
+    - Private Subnet 1 - 10.0.16.0/20
+    - Private Subnet 2 - 10.0.32.0/20
+
+
+Subnets IPv4:
+=============
+
+    - AWS reserves 5 IP addresses (first 4 and last 1) in each Subnet
+    - IP addresses not available and not be assigned to instances
+    - 10.0.0.0/24 
+
+        - 10.0.0.0
+        - 10.0.0.1
+        - 10.0.0.2
+        - 10.0.0.3
+        - 10.0.0.255
+
+Exam Tip:
+========
+
+    29 IPs are required => don't choose /27 (32 IPs)
+                           choose /26 (64-5 = 59 > 29)
