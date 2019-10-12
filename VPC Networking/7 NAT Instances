@@ -1,0 +1,22 @@
+NAT Instances:
+==============
+
+    - Network Address Translation
+    - Allow instances in Private subnet to connect to the internet
+    - Launched in Public subnet
+    - Disable Source/Desination check
+    - use have Elastic IP attached to it 
+    - Configure Route Table to direct traffic from private subnet to NAT instances
+    
+
+    SG Rules:
+    =========
+
+    SSH - 22 - 0.0.0.0/0
+    HTTP - 80 - 10.0.0.0/16
+    HTTPS - 443 - 10.0.0.0/16
+
+    Privat Instance - 10.0.0.0/16
+
+    - Copy PrivateKey.pem to Public Instance
+    - SSH into the Private instance from NAT Instance
