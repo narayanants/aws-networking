@@ -1,0 +1,18 @@
+Default VPC Overview:
+=====================
+
+- All new accounts will have a default VPC
+- New instances are launced in the default VPC if no subnets are specified
+- Default VPC have internet connectivity and all instances have public IP
+- Public and Private DNS 
+
+Default VPC:
+=============
+
+    - VPC CIDR - 172.31.0.0/16
+    - Subnets  - 172.31.0.0/20 <=> Within the VPC CIDR
+    - Route Table - 1 RT
+    - Internet Gateway
+    - 1 Network Access Control List
+    
+
