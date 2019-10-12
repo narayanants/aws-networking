@@ -1,0 +1,49 @@
+CIDR:
+=====
+
+    - Classless Inter Domain Routing
+    - Used when we have Security Groups for AWS Networking in General
+
+
+    Two components:
+    ===============
+
+    - base IP (xxx.xxx.xxx.xxx)
+    - Subnet Mask (/26)
+
+
+    /32 - 2 power 0
+
+
+    Quick Memo:
+    ===========
+
+    /32 - No IP can change
+    /24 - Last IP number can change
+    /16 - Last 2 can change
+    /8 - Last 3 can change 
+    /0 - all can change
+
+
+    Exercise:
+    =========
+
+
+    192.168.0.0/24  => 192.168.0.0 - 192.168.0.255 (256)
+    192.168.0.0/16  => 192.168.0.0 - 192.168.255.255 (65,536)
+    192.0.0.0/8  => 192.0.0.0 - 192.255.255.255 (65,536)
+    192.168.1.10/32  => 192.168.1.10 (1)
+    0.0.0.0/0 - All IPs
+
+    Private vs Public IPs:
+    ======================
+
+    10.0.0.0 - 10.255.255.255 (10.0.0.0/8) => Big Networks => Private Networks
+    172.16.0.0 - 172.31.255.255 (172.16.0.0/12) => Default AWS One
+    192.168.0.0 - 192.168.255.255 (192.168.0.0/16) => Home Networks
+
+
+    All the rest of the IP on the internet are public IP
+
+    
+
