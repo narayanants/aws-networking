@@ -1,0 +1,48 @@
+ECS Task Definition Networking:
+================================
+
+    3 types of Networking Modes:
+
+        - bridge
+        - host
+        - awsvpc
+        - none
+
+    
+    bridge:
+    -------
+
+        - Task uses Docker's built-in virtual Network
+        - Every container will get its own IP Address
+
+        - If the network mode is bridge, the task utilized the Docker's built-in virtual network which runs inside each container instance
+
+
+    
+    awsvpc:
+    -------
+
+        - Each task has its own ENI
+        - Achieves Network Isolation
+        - Security groups gets attached at the container level
+        - Each container will get its own security groups
+
+    none:
+    -----
+
+        - Disables all Networking
+        - IP for the container not configured
+        - No access to the external networks as well as the other containers
+        - Has the loopback Address
+
+        If the network mode is none, the task's containers do not have external connectivity and port mappings can't be specified in the task Definition
+
+    
+    host:
+    -----
+
+        - Shares the host's network stack
+        - ENI and security group gets attached to the EC2 level
+        - Tasks bypasses Docker virtual network and maps container ports to the EC2 instance network interface
+        
+
