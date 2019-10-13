@@ -9,3 +9,7 @@ VPC Concepts:
     - NAT Instances
     - Bastion Hosts
     - Security Groups and NACLs
+    - VPC Peering
+    - VPC Endpoints
+    - AWS Flow Logs
+    - Bastion Hosts
