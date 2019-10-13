@@ -2,4 +2,17 @@ VPC Endpoints:
 ==============
 
 
-- 
+- Connect to AWS Services using a private network
+- Access AWS Network within the private Network
+- Scale Horizontally and Redundant
+- No need IGW, NAT Gateway to access AWS Services
+- Interface provisions an ENI (private IP address) as an entry point - most AWS Services
+- Gateway provisions a target and must be updated in route table - S3 and DynamoDB
+- DNS Setting Resolution
+- Route Tables
+
+- Default region of the AWS CLI is us-east-1
+- Take a note of the region while using the AWS CLI
+- S3 and DynamoDB are Gateway Setup
+- Other services are interface Setup
+
