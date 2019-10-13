@@ -1,0 +1,18 @@
+AWS Flow Logs:
+==============
+
+- Capture info about IP traffic going into the interfaces
+- VPC Flow Logs
+- Subnet Flow Logs
+- ENI Flow Logs
+
+- Helps to monitor and troubleshoot connectivity issues
+- Flow logs data can go to S3/ CloudWatch logs
+- Captures network info from AWS managed services such as ELB, RDS, ElasticCache, Redshift, Workspaces
+
+
+- srcaddr, dstaddr help identify problematic IP
+- scrport, dstport help identify problematic PORTS
+- Action: success or failure
+- Can be used for analytics on usage patterns or malicious behaviour
+- Query VPC flow logs using Athena or CloudWatch Logs insights
