@@ -1,0 +1,12 @@
+VPC Peering
+============
+
+- Connect 2 VPC using , AWS private network
+- Make them behave as if they are in the same network 
+- Must not have overlapping CIDR
+- VPC peering connection is not transitive
+- VPC peering with another AWS  Account
+- Update Route tables in each VPCs subnet to ensure instances can communicate
+- 
+
+    VPC A <=> VPC B <=> VPC C
