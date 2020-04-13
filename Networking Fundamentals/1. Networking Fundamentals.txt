@@ -1,0 +1,82 @@
+Networking Fundamentals
+=======================
+
+    - VPC
+    - Subnets
+    - Gateways, Endpoints and Peering
+    - CIDR Addresses
+        - /16 - Largest
+        - /28 - Smallest
+
+5 things required for Internet Traffic
+---------------------------------------
+
+    - Public IP
+    - Internet Gateway attached to a VPC
+    - Route to an Internet Gateway
+    - NACL Allow Rule
+    - Security Group Allow Rule
+
+Types of Gateways:
+------------------
+
+    - Customer Gateway
+    - VPN Gateway
+    - NAT Gateway
+    - Internet Gateway  - IGW - Route Table (0.0.0.0/0)
+        - Egress Only IGW - Egress IPv6 traffic from  VPC to Internet 
+    - AWS Transit Gateway
+    - Endpoints
+    - Peering Connection
+
+Subnets:
+========
+
+        - Public Subnets - Route table - IGW
+        - Private Subnets - Route Table - IPv4 traffic - NAT Gateway 
+
+Network Security:
+-----------------
+
+    - NACL
+    - SG
+    - VPC Flow Logs
+    - Amazon VPC Traffic Mirroring
+
+VPC Flow Logs:
+--------------
+
+    - Amazon CloudWatch logs or Amazon S3
+    - Does not impact throughput or latency
+    - Apply to VPC, Subnet or ENI
+    - Accepted, Rejected or All Traffic
+
+ELB:
+===
+
+    - ALB 
+        - IPv4
+        - Layer 7
+        - HTTP,HTTPS
+        - EC2,Containers,Lamda,Private IP
+    - NLB
+        - IPv4
+        - Layer 4
+        - TCP,UDP,TLS
+
+AWS Site-to-Site VPN:
+----------------------
+
+    VPC <=> Virtual Private Gateway <=> Corporate Data Center
+
+
+VPC Endpoints:
+=============
+
+    - Access AWS services without going through the Internet Gateway
+    - Interface and Gatewat Endpoints
+    
+
+
+
+
