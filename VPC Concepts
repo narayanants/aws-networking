@@ -13,3 +13,13 @@ VPC Concepts:
     - VPC Endpoints
     - AWS Flow Logs
     - Bastion Hosts
+
+
+CIDR Ranges:
+============
+
+    /24 - 256
+    /25 - 128
+    /26 - 64
+    /27 - 32
+    /28 - 16
