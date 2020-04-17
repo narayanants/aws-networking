@@ -74,7 +74,7 @@ VPC Endpoints:
 =============
 
     - Access AWS services without going through the Internet Gateway
-    - Interface and Gatewat Endpoints
+    - Interface and Gateway Endpoints
     
 
 
