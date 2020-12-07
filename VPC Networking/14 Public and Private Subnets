@@ -1,0 +1,26 @@
+Private Subnet:
+--------------
+
+* To create an additional private subnet
+* In the left navigation pane, choose Subnets.
+* Choose Create Subnet.
+* For Name tag, enter a name for your subnet, such as Private subnet.
+* For VPC, choose the VPC that you created earlier.
+* For Availability Zone, choose a different Availability Zone than your original subnets in the VPC.
+* For IPv4 CIDR block, enter a valid CIDR block. For example, the wizard creates CIDR blocks in 10.0.0.0/24 and 10.0.1.0/24 by default. You could use 10.0.3.0/24 for your second private subnet.
+* Choose Yes, Create.
+
+
+Public Subnet:
+--------------
+
+* In the left navigation pane, choose Subnets and then Create Subnet.
+* For Name tag, enter a name for your subnet, such as Public subnet.
+* For VPC, choose the VPC that you created earlier.
+* For Availability Zone, choose the same Availability Zone as the additional private subnet that you created in the previous procedure.
+* For IPv4 CIDR block, enter a valid CIDR block. For example, the wizard creates CIDR blocks in 10.0.0.0/24 and 10.0.1.0/24 by default. You could use 10.0.2.0/24 for your second public subnet.
+* Choose Yes, Create.
+* Select the public subnet that you just created and choose Route Table, Edit.
+* By default, the main route table is selected. Choose the other available route table so that the 0.0.0.0/0 destination is routed to the internet gateway (igw-xxxxxxxx) and choose Save.
+* With your second public subnet still selected, choose Subnet Actions, Modify auto-assign IP settings.
+Select Enable auto-assign public IPv4 address and choose Save, Close.
